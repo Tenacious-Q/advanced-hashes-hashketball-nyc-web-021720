@@ -175,15 +175,15 @@ end
 =end
 
 def player_numbers(team_name)
-  # returns an array of jersey numbers for the team passed 
-  # did not work in video using #map instead of #each 
-  
+  # returns an array of jersey numbers for the team passed
+  # did not work in video using #map instead of #each
+
   nums = []
-  game_hash.each do |place, team| 
-    if team[:team_name]== team_name 
-      team.each do |attributes, data| 
-        if attributes == :players 
-          data.each do |player| 
+  game_hash.each do |place, team|
+    if team[:team_name]== team_name
+      team.each do |attributes, data|
+        if attributes == :players
+          data.each do |player|
             nums << player[:number]
           end
         end
