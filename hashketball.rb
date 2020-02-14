@@ -120,7 +120,7 @@ game_hash = {
 }
 end
 
-def num_points_scored(player_name)
+def num_points_scored(players_name)
   # return number of points for player passed in
   # Note: don't forget to use bonding.pry
   game_hash.each do |place, team|
