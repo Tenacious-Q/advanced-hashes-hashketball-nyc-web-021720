@@ -122,16 +122,16 @@ end
 
 def num_points_scored(player_name)
   # return number of points for player passed in
-  game_hash.each do |place, team|
-    #Note, use binding.pry more
+  # Note: don't forget to use bonding.pry 
+  game_hash.each do |place, team| 
     team.each do |attribute, data|
-      if attribute == players
+      if attribute == :players 
         data.each do |player|
-          if player[:player_name] == player_name
+          if player{:player_name} == players_name 
             return player[:points]
-          end
-        end
-      end
-    end
-  end
+          end 
+        end 
+      end 
+    end 
+  end 
 end
