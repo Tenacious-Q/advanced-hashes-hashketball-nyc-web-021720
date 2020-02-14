@@ -238,5 +238,5 @@ def most_points_scored
       end
     end
   end
-  highest_scorer 
+  highest_scorer
 end
