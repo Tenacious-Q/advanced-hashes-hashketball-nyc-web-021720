@@ -122,7 +122,7 @@ end
 
 def num_points_scored(players_name)
   # return number of points for player passed in
-  # Note: don't forget to use bonding.pry
+  # Note: don't forget to use binding.pry
   game_hash.each do |place, team|
     team.each do |attribute, data|
       if attribute == :players
@@ -135,3 +135,17 @@ def num_points_scored(players_name)
     end
   end
 end
+
+def shoe_size(players_name)
+  game_hash.each do |place, team| 
+    team.each do |attribute, data| 
+      if attribute == :players 
+        data.each do |player| 
+          if player[:player_name]  == players_name 
+            return player[:points]
+          end
+        end 
+      end
+    end
+  end
+end 
